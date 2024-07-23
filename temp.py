@@ -9,13 +9,16 @@ taxi_map = gym.make("Taxi-v3").env
 
 
 "Learning Rate"
-alpha_values = np.linspace(0.5, 0.5 ,1)
-alpha = 0.1
+alpha_values = np.linspace(0.01, 0.9 ,10)
+"after a parameter sweep we get this epsilon value"
+alpha = 0.5
+
 "Discount Rate"
 gamma = 0.9
+
 "Explore Rate"
 epsilon_values = np.linspace(0.1, 0.9,9)
-"after a parameter swap we get this epsilon value"
+"after a parameter sweep we get this epsilon value"
 epsilon = 0.2
 
 "Reward List to hold obtained reward values for each episode"
